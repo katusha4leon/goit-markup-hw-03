@@ -79,7 +79,7 @@ button {
 .card-set {
   display: flex;
   flex-wrap: wrap;
-  column-gap: var(--indent);
+  gap: var(--indent);
 }
 
 .card-set-item {
@@ -298,7 +298,7 @@ body {
 
 .gallery-list {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 /**
@@ -358,7 +358,7 @@ body {
   |============================
 */
 .portfolio-section {
-  padding-top: 96px 0 120px;
+  padding: 96px 0 120px;
 }
 /**
   |============================
