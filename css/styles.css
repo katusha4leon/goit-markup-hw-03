@@ -11,6 +11,27 @@
   --color-grey: #2e2f42;
   --color-white: #ffffff;
   --color-dairy: #fcfcfc;
+
+  --indent: 24px;
+  --items: 4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+button {
+  cursor: pointer;
 }
 
 /**
@@ -40,11 +61,31 @@
 
 .link {
   text-decoration: none;
+  padding: 24px 0;
 }
 
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
+
+/**
+  |============================
+  | Card set
+  |============================
+*/
+
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+
+.card-set-item {
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+
 /**
   |============================
   | Studio
@@ -60,6 +101,64 @@ body {
   color: var(--color-slate);
 }
 
+.container {
+  width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 120px 0;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+
+  color: var(--color-navy-blue);
+
+  padding-bottom: 72px;
+}
+
+.sub-title {
+  margin-bottom: 8px;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+
+  color: var(--color-navy-blue);
+}
+
+/**
+  |============================
+  | Header
+  |============================
+*/
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav {
+  display: flex;
+  /* margin-right: auto; */
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
 .logo {
   font-family: 'Raleway', sans-serif;
   font-style: normal;
@@ -70,14 +169,12 @@ body {
   text-transform: uppercase;
 
   color: var(--color-iris);
+
+  margin-right: 76px;
 }
 
 .logo > .logo-part {
   color: var(--color-navy-blue);
-}
-
-.logo > .logo-part-footer {
-  color: var(--color-cloud);
 }
 
 .nav-item {
@@ -95,6 +192,12 @@ body {
   color: var(--color-ocean);
 }
 
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
 .contacts {
   font-style: normal;
 }
@@ -108,16 +211,32 @@ body {
   color: var(--color-ocean);
 }
 
+/**
+  |============================
+  | Hero
+  |============================
+*/
+
 .btn {
+  display: block;
+
+  min-width: 169px;
+  min-height: 56px;
+
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
 
-  cursor: pointer;
+  margin: 0 auto;
+
+  /* cursor: pointer; */
   background-color: var(--color-iris);
   color: var(--color-white);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 .btn:hover,
@@ -127,10 +246,11 @@ body {
 
 .hero {
   background-color: var(--color-navy-blue);
-  /* height: 600px; */
+  padding: 188px 0;
 }
 
 .hero-title {
+  width: 496px;
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
@@ -138,51 +258,86 @@ body {
   letter-spacing: 0.02em;
 
   color: var(--color-white);
+  margin: 0 auto 48px auto;
 }
+
+/**
+  |============================
+  | Advantages
+  |============================
+*/
+
+.adv-list {
+  display: flex;
+  /* align-items: center;
+  gap: 24px; */
+  justify-content: space-between;
+}
+
+.main-text {
+  color: var(--color-slate);
+  width: 264px;
+}
+
+/**
+  |============================
+  | Gallery
+  |============================
+*/
+
+.gallery-section {
+  padding-top: 0;
+}
+
+.gallery-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+/**
+  |============================
+  | Team
+  |============================
+*/
 
 .team-section {
   background-color: var(--color-cloud);
 }
 
-.section-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-
-  text-align: center;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-
-  color: var(--color-navy-blue);
-}
-
-.sub-title {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-
-  color: var(--color-navy-blue);
-}
-
 .team-card {
+  background: var(--color-white);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.card-content {
+  padding: 32px 16px;
 }
 
 .card-text {
   text-align: center;
 }
 
-.main-text {
-  color: var(--color-slate);
-}
+/**
+  |============================
+  | Footer
+  |============================
+*/
 
 .footer {
-  height: 312px;
   background-color: var(--color-navy-blue);
+  padding: 100px 0;
+}
+
+.logo > .logo-part-footer {
+  color: var(--color-cloud);
 }
 
 .footer-text {
   color: var(--color-cloud);
+  padding-top: 16px;
+  width: 264px;
 }
 
 /**
