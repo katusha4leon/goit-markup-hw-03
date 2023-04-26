@@ -61,7 +61,6 @@ button {
 
 .link {
   text-decoration: none;
-  padding: 24px 0;
 }
 
 .list {
@@ -144,12 +143,13 @@ body {
 
 .header {
   border-bottom: 1px solid var(--color-cornflower);
+  padding: 24px 0;
 }
 
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .nav {
@@ -174,12 +174,11 @@ body {
   text-transform: uppercase;
 
   color: var(--color-iris);
-
-  margin-right: 76px;
 }
 
 .logo > .logo-part {
   color: var(--color-navy-blue);
+  margin-right: 76px;
 }
 
 .nav-item {
@@ -283,7 +282,6 @@ body {
 
 .main-text {
   color: var(--color-slate);
-  width: 264px;
 }
 
 /**
