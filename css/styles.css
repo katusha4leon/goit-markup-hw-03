@@ -178,6 +178,9 @@ body {
 
 .logo > .logo-part {
   color: var(--color-navy-blue);
+}
+
+.header-logo {
   margin-right: 76px;
 }
 
@@ -189,6 +192,8 @@ body {
   letter-spacing: 0.02em;
 
   color: var(--color-navy-blue);
+
+  padding: 24px 0;
 }
 
 .nav-item:hover,
